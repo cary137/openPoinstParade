@@ -58,11 +58,14 @@
               <div id="tags">
                 
               </div>
-
-              <p id="shortdesc">
-                This is where we can put the input / search stuff.
-            </p>
-            
+              <!-- Search input form -->
+            <form>
+              <fieldset>
+                <legend>Search for peace:</legend>
+                Your Location: <input type="text" placeholder="Search by city,state, zip">
+                <button type="submit" class="btn">Search</button>
+              </fieldset>
+            </form>
             
         </div>
     </body>
