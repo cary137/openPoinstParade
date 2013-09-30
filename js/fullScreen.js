@@ -1,5 +1,7 @@
 var map = new OpenLayers.Map({
     div: "map",
+    projection: new OpenLayers.Projection("EPSG:900913"), 
+    displayProjection: new OpenLayers.Projection("EPSG:4326"), //Display in normal geo coords
     layers: [
         new OpenLayers.Layer.OSM("OSM (without buffer)"),
         new OpenLayers.Layer.OSM("OSM (with buffer)", null, {buffer: 2})
@@ -13,8 +15,12 @@ var map = new OpenLayers.Map({
         new OpenLayers.Control.PanZoom(),
         new OpenLayers.Control.Attribution()
     ],
-    center: [0, 0],
-    zoom: 3
+    center: [-13615167.70164,6038981.94585], // Center uses EPSG:900913 coords
+    zoom: 12
+    
 });
 
+// this is in permalink example but seems to do nothing
+// if (!map.getCenter()) map.zoomToMaxExtent();
 map.addControl(new OpenLayers.Control.LayerSwitcher());
+map.addControl(new OpenLayers.Control.Permalink({anchor: true}));
