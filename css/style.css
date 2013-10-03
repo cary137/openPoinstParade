@@ -13,3 +13,7 @@ html, body, #map {
     background-color: white;
     padding: 0 0.5em 0.5em 0.5em;
 }
+
+#inputLocation {
+    display:none;
+}

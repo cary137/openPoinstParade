@@ -63,6 +63,13 @@
               <fieldset>
                 <legend>Search for peace:</legend>
                 Your Location: <input type="text" placeholder="Search by city,state, zip">
+                <p><a href="#" onclick="$('#inputLocation').toggle(); return false;"><strong>OR add your own peaceful shitting joint!</strong></a></p>
+                <div id="inputLocation">
+                  Shitter Handle: <input type="text" placeholder="Cafe Vita"></br>
+                  Description: <input type="text" placeholder="Ferocious coffee-fueled hellhole.  But the door locks."></br>
+                  Latitude: <input id="lat_input" name="lat_input" type="text" placeholder="47.614051"></br>
+                  Longitude: <input id="long_input" name="long_input" type="text" placeholder="-122.319163">
+                </div>                
                 <button type="submit" class="btn">Search</button>
               </fieldset>
             </form>
