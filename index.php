@@ -31,7 +31,6 @@
         }
       }
     </style>
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!--Local Overrides to Bootstrap defaults-->
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
