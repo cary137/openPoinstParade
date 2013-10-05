@@ -15,7 +15,7 @@ var map = new OpenLayers.Map({
         new OpenLayers.Control.PanZoom(),
         new OpenLayers.Control.Attribution()
     ],
-    center: [-13615167.70164,6038981.94585], // Center uses EPSG:900913 coords
+    center: [-12615167.70164,6038981.94585], // Center uses EPSG:900913 coords
     zoom: 12
     
 });
@@ -24,3 +24,12 @@ var map = new OpenLayers.Map({
 // if (!map.getCenter()) map.zoomToMaxExtent();
 map.addControl(new OpenLayers.Control.LayerSwitcher());
 map.addControl(new OpenLayers.Control.Permalink({anchor: true}));
+
+// Adding a marker
+var markerOverlay = new OpenLayers.Layer.Vector("Overlay");
+var feature = new OpenLayers.Feature.Vector(
+    new OpenLayers.Geometry.Point(-13615167.70164,6038981.94585),
+    {some:'data'},
+    {externalGraphic: 'img/marker.png', graphicHeight: 28, graphicWidth: 20 });
+    markerOverlay.addFeatures(feature);
+    map.addLayer(markerOverlay);
